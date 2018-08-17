@@ -20,11 +20,12 @@ document.onkeyup = function (event) {
     }
     else {
         guessLeft -= 1;
-        results.textContent =  "You Lost!";
+        results.textContent =  "Wrong Letter!";
         playerGuess.push(userGuess);
     };
 
     if (guessLeft === 0) {
+        results.textContent =  "You Lost!";
         loseCount += 1;
         guessLeft = 10;
         playerGuess = [];
